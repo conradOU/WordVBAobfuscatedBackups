@@ -1,13 +1,5 @@
 Private Sub Document_Close()
-
-    Application.Dialogs(wdDialogFileSaveAs).Show
     
-    ActiveDocument.SaveAs2 FileName:="C:\Users\User\Documents\" _
-                & "processing saving " _
-                & Format(Time, "s.m.h") _
-                & "." & Format(Date, "m.d"), _
-    FileFormat:=wdFormatDocumentDefault, _
-    AddToRecentFiles:=False
     'WritePassword:=strPWD
     'obscure the filename and enable password. But make sure you'll be able to read it
     'save to a hidden folder somewhere obscure
@@ -17,4 +9,14 @@ Private Sub Document_Close()
     'no file extension as an extra protection, you'll add it yourself when opening the files
     'date obfuscated on purpose
     'TODO: try to have that file saved with attribute hidden
+
+    Application.Dialogs(wdDialogFileSaveAs).Show
+    
+    ActiveDocument.SaveAs2 FileName:="C:\Users\User\Documents\" _
+                & "processing saving " _
+                & Format(Time, "s.m.h") _
+                & "." & Format(Date, "m.d"), _
+    FileFormat:=wdFormatDocumentDefault, _
+    AddToRecentFiles:=False
+
 End Sub
