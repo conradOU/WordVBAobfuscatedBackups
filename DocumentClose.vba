@@ -2,13 +2,16 @@ Private Sub Document_Close()
     
     'WritePassword:=strPWD
     'obscure the filename and enable password. But make sure you'll be able to read it
-    'save to a hidden folder somewhere obscure
-    'the date is not really important in the file name, as it's the same in the parameters
-    'change date when putting that script on, then change it again, to cover your tracks
-    '                & ".doc",
+    'save backups, potentially to a hidden folder somewhere obscure
+    
+    'the date is not really important in the file name, as it's saved in the parameters anyway
+    
+    'add ".doc", to the saved files, prior to opening them. They're saved without ".doc" on purpose.
+    
     'no file extension as an extra protection, you'll add it yourself when opening the files
     'date obfuscated on purpose
-    'TODO: try to have that file saved with attribute hidden
+    
+    'TODO: have that file saved with attribute hidden
 
     Application.Dialogs(wdDialogFileSaveAs).Show
     
