@@ -11,7 +11,7 @@ Private Sub Document_Close()
     'no file extension as an extra protection, you'll add it yourself when opening the files
     'date obfuscated on purpose
     
-    'TODO: have that file saved with attribute hidden
+    'TODO: have that file saved with a hidden attribute
 
     Application.Dialogs(wdDialogFileSaveAs).Show
     
